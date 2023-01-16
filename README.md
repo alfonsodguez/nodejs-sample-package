@@ -1,1 +1,1 @@
-# node-sample-package
+# nodejs-sample-package
