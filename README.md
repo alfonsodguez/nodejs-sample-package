@@ -1,4 +1,4 @@
-# nodejs-sample-package
+# npm-sample-package
 Basic example of npm publish package with nodejs.
 
 ## Basic usage
