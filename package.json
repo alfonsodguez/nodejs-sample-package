@@ -1,0 +1,50 @@
+{
+  "name": "@aa_labs/sample-package",
+  "version": "1.0.0",
+  "description": "Sample nodejs public package npm",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register --timeout 30000",
+    "prebuild": "rimraf ./dist/*.*",
+    "build": "npm run compressjs",
+    "watch": "onchange ./src/*.* -- npm run build",
+    "compressjs": "uglifyjs ./src/index.js -c --comments --source-map \"root='/', url='index.min.js.map'\" -o ./dist/index.min.js",
+    "postcompressjs": "cross-var \"replace \"@VERSION@\" $npm_package_version ./dist/index.min.js\"",
+    "babel": "npx babel src -d lib --ignore 'test/*.spec.js'",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfonsodguez/node-sample-package.git"
+  },
+  "author": "alfonsodguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfonsodguez/node-sample-package/issues"
+  },
+  "homepage": "https://github.com/alfonsodguez/node-sample-package#readme",
+  "dependencies": {
+    "bignumber.js": "^9.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "chai": "^4.3.7",
+    "commitizen": "^4.2.6",
+    "cross-var": "^1.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "mocha": "^10.2.0",
+    "onchange": "^7.1.0",
+    "replace": "^1.2.1",
+    "rimraf": "^3.0.2",
+    "uglify-js": "^3.17.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
