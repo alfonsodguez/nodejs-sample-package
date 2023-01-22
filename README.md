@@ -1,5 +1,5 @@
 # npm-sample-package
-Basic example of npm publish package with nodejs. (space, space, Enter)
+Basic example of npm publish package with nodejs.\s\s
 <https://www.npmjs.com/package/@aa_labs/sample-package>
 
 ## Basic usage
@@ -16,7 +16,7 @@ Follow the steps below (you need to be registered into npm) to publish and updat
   ```
 - Login npm account in your terminal.
   ```
-  > npm login 
+  npm login 
   ```
 - Publishing scoped public packages
   ```
