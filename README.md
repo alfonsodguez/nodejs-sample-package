@@ -1,5 +1,5 @@
 # npm-sample-package
-Basic example of npm publish package with nodejs.\s\s
+Basic example of npm publish package with nodejs. \
 <https://www.npmjs.com/package/@aa_labs/sample-package>
 
 ## Basic usage
